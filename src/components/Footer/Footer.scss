@@ -1,14 +1,80 @@
 .contact-wrapper {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    justify-content: center;
-    align-items: center;
-    text-align: center;  
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  align-items: start;
 }
 
-/* Tablet & Desktop */
-@media (min-width: 768px) {
-  .contact-wrapper {
-    grid-template-columns: repeat(3, 1fr);
+.links {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s;
+  font-size: 1rem;
+  padding-bottom: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+
+  &:hover {
+    color: #f94a0b;
   }
+}
+
+.followus {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s;
+  font-size: 1rem;
+  padding-bottom: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &:hover {
+    color: #f94a0b;
+  }
+}
+
+.contactus {
+  justify-self: center;
+  text-align: center;
+  flex-direction: column;
+  grid-column: 1 / -1;
+  padding-bottom: 1rem;
+}
+
+.footerp {
+  font-size: 1rem;
+  line-height: normal;
+}
+
+.copyright {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 0.9rem;
+
+}
+
+@media screen and (min-width: 768px) {
+  .contact-wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding-bottom: 2rem;
+    align-items: start;
+  }
+
+  .contactus {
+  justify-self: center;
+  text-align: center;
+  grid-column: auto;
+  padding-bottom: 0;
+}
 }
