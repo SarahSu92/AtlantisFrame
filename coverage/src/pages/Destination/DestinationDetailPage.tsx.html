@@ -23,30 +23,30 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">88.88% </span>
+                <span class="strong">87.5% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>8/9</span>
+                <span class='fraction'>7/8</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
                 <span class="strong">50% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>1/2</span>
+                <span class='fraction'>3/6</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
                 <span class="strong">100% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>4/4</span>
+                <span class='fraction'>3/3</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
                 <span class="strong">100% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>7/7</span>
+                <span class='fraction'>6/6</span>
             </div>
         
             
@@ -221,7 +221,24 @@
 <a name='L156'></a><a href='#L156'>156</a>
 <a name='L157'></a><a href='#L157'>157</a>
 <a name='L158'></a><a href='#L158'>158</a>
-<a name='L159'></a><a href='#L159'>159</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<a name='L159'></a><a href='#L159'>159</a>
+<a name='L160'></a><a href='#L160'>160</a>
+<a name='L161'></a><a href='#L161'>161</a>
+<a name='L162'></a><a href='#L162'>162</a>
+<a name='L163'></a><a href='#L163'>163</a>
+<a name='L164'></a><a href='#L164'>164</a>
+<a name='L165'></a><a href='#L165'>165</a>
+<a name='L166'></a><a href='#L166'>166</a>
+<a name='L167'></a><a href='#L167'>167</a>
+<a name='L168'></a><a href='#L168'>168</a>
+<a name='L169'></a><a href='#L169'>169</a>
+<a name='L170'></a><a href='#L170'>170</a>
+<a name='L171'></a><a href='#L171'>171</a>
+<a name='L172'></a><a href='#L172'>172</a>
+<a name='L173'></a><a href='#L173'>173</a>
+<a name='L174'></a><a href='#L174'>174</a>
+<a name='L175'></a><a href='#L175'>175</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -337,7 +354,11 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -351,7 +372,18 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">10x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -390,6 +422,7 @@ import {
   FiSun,
   FiMessageCircle,
 } from 'react-icons/fi';
+import { AttractionsMap } from '../../components/AttractionsMap';
 &nbsp;
 export const DestinationDetailPage = () =&gt; {
   const { id } = useParams&lt;{ id: string }&gt;();
@@ -402,8 +435,9 @@ export const DestinationDetailPage = () =&gt; {
   return (
     &lt;&gt;
       &lt;div className="destination-detail"&gt;
-        &lt;div className="top"&gt;
-          &lt;img
+        &lt;div className="postition"&gt;
+          &lt;img 
+            className='heroimg'
             src={`${import.meta.env.BASE_URL}${destination.heroimage}`}
             alt={destination.name}
           /&gt;
@@ -416,9 +450,9 @@ export const DestinationDetailPage = () =&gt; {
         &lt;div className="content"&gt;
           &lt;section className="box"&gt;
             &lt;h2&gt;About {destination.name}&lt;/h2&gt;
-            &lt;p&gt;{destination.longDescription}&lt;/p&gt;
-            &lt;h4&gt;Tips&lt;/h4&gt;
-            &lt;p&gt;{destination.tips}&lt;/p&gt;
+            &lt;p className="text"&gt;{destination.longDescription}&lt;/p&gt;
+            &lt;h4 className="tips"&gt;Tips&lt;/h4&gt;
+            &lt;p className="text"&gt;{destination.tips}&lt;/p&gt;
           &lt;/section&gt;
 &nbsp;
           &lt;h2&gt;Quick Facts&lt;/h2&gt;
@@ -429,8 +463,8 @@ export const DestinationDetailPage = () =&gt; {
                 &lt;FiGlobe size={24} /&gt;
               &lt;/div&gt;
               &lt;div&gt;
-                &lt;h4&gt;Country&lt;/h4&gt;
-                &lt;p&gt;{destination.country}&lt;/p&gt;
+                &lt;h4 className="facts"&gt;Country&lt;/h4&gt;
+                &lt;p className="fact"&gt;{destination.country}&lt;/p&gt;
               &lt;/div&gt;
             &lt;/div&gt;
 &nbsp;
@@ -439,8 +473,8 @@ export const DestinationDetailPage = () =&gt; {
                 &lt;FiZap size={24} /&gt;
               &lt;/div&gt;
               &lt;div&gt;
-                &lt;h4&gt;Religion&lt;/h4&gt;
-                &lt;p&gt;{destination.religion}&lt;/p&gt;
+                &lt;h4 className="facts"&gt;Religion&lt;/h4&gt;
+                &lt;p className="fact"&gt;{destination.religion}&lt;/p&gt;
               &lt;/div&gt;
             &lt;/div&gt;
 &nbsp;
@@ -449,8 +483,8 @@ export const DestinationDetailPage = () =&gt; {
                 &lt;FiDollarSign size={24} /&gt;
               &lt;/div&gt;
               &lt;div&gt;
-                &lt;h4&gt;Currency&lt;/h4&gt;
-                &lt;p&gt;{destination.currency}&lt;/p&gt;
+                &lt;h4 className="facts"&gt;Currency&lt;/h4&gt;
+                &lt;p className="fact"&gt;{destination.currency}&lt;/p&gt;
               &lt;/div&gt;
             &lt;/div&gt;
 &nbsp;
@@ -459,8 +493,8 @@ export const DestinationDetailPage = () =&gt; {
                 &lt;FiMapPin size={24} /&gt;
               &lt;/div&gt;
               &lt;div&gt;
-                &lt;h4&gt;Region&lt;/h4&gt;
-                &lt;p&gt;{destination.region}&lt;/p&gt;
+                &lt;h4 className="facts"&gt;Region&lt;/h4&gt;
+                &lt;p className="fact"&gt;{destination.region}&lt;/p&gt;
               &lt;/div&gt;
             &lt;/div&gt;
 &nbsp;
@@ -469,8 +503,8 @@ export const DestinationDetailPage = () =&gt; {
                 &lt;FiSun size={24} /&gt;
               &lt;/div&gt;
               &lt;div&gt;
-                &lt;h4&gt;Climate&lt;/h4&gt;
-                &lt;p&gt;{destination.climate}&lt;/p&gt;
+                &lt;h4 className="facts"&gt;Climate&lt;/h4&gt;
+                &lt;p className="fact"&gt;{destination.climate}&lt;/p&gt;
               &lt;/div&gt;
             &lt;/div&gt;
 &nbsp;
@@ -479,59 +513,73 @@ export const DestinationDetailPage = () =&gt; {
                 &lt;FiMessageCircle size={24} /&gt;
               &lt;/div&gt;
               &lt;div&gt;
-                &lt;h4&gt;Language&lt;/h4&gt;
-                &lt;p&gt;{destination.language}&lt;/p&gt;
+                &lt;h4 className="facts"&gt;Language&lt;/h4&gt;
+                &lt;p className="fact"&gt;{destination.language}&lt;/p&gt;
               &lt;/div&gt;
             &lt;/div&gt;
           &lt;/div&gt;
 &nbsp;
           &lt;section className="box"&gt;
             &lt;h2&gt;Best Time to Travel&lt;/h2&gt;
-            &lt;p&gt;{destination.bestTimeToTravel}&lt;/p&gt;
+            &lt;ul className="text"&gt;
+              &lt;li&gt;May–September: Best weather for sightseeing.&lt;/li&gt;
+              &lt;li&gt;December–February: Ideal for skiing.&lt;/li&gt;
+              &lt;li&gt;April &amp; October: Fewer crowds and mild temperatures.&lt;/li&gt;
+            &lt;/ul&gt;
           &lt;/section&gt;
 &nbsp;
           &lt;section className="box"&gt;
-            &lt;img src="" alt="" className="hotel-image" /&gt;
             &lt;h2&gt;Hotels&lt;/h2&gt;
             &lt;div className="hotels-grid"&gt;
-              {destination.hotels.map((h, i) =&gt; (
-                &lt;div key={i} className="hotel-item"&gt;
-                  {h}
-                &lt;/div&gt;
+              {destination.hotels.map((hotel) =&gt; (
+                &lt;a
+                  key={hotel.name}
+                  href={hotel.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hotel-card"
+                &gt;
+                  &lt;div className="hotel-card-image"&gt;
+                    &lt;img
+                      src={`${import.meta.env.BASE_URL}${hotel.img}`}
+                      alt={hotel.name}
+                    /&gt;
+                  &lt;/div&gt;
+&nbsp;
+                  &lt;div className="hotel-card-content"&gt;
+                    &lt;h3&gt;{hotel.name}&lt;/h3&gt;
+                    &lt;p className="hotel-description"&gt;{hotel.description}&lt;/p&gt;
+                  &lt;/div&gt;
+                &lt;/a&gt;
               ))}
             &lt;/div&gt;
           &lt;/section&gt;
 &nbsp;
           &lt;section className="box attractions-section"&gt;
-            &lt;div className="attractions-layout"&gt;
-              {/* Textkolumn */}
-              &lt;div className="attractions-text"&gt;
-                &lt;h2&gt;Main Attractions&lt;/h2&gt;
-                &lt;ul&gt;
-                  {destination.attractions.map((a, i) =&gt; (
-                    &lt;li key={i}&gt;{a}&lt;/li&gt;
-                  ))}
-                &lt;/ul&gt;
-              &lt;/div&gt;
-&nbsp;
-              {/* Bildkolumn */}
-              &lt;div className="attractions-image"&gt;
-                &lt;img
-                  src={`${import.meta.env.BASE_URL}${destination.image1}`}
-                  alt={destination.name}
-                /&gt;
-              &lt;/div&gt;
-            &lt;/div&gt;
+            &lt;h2&gt;What to See &amp; Do&lt;/h2&gt;
+            &lt;p&gt;
+              Use zoom in and out to see all attractions. Click on the
+              pointer/marker to read more.{' '}
+            &lt;/p&gt;
+            &lt;AttractionsMap
+              attractions={destination.attractions || <span class="branch-1 cbranch-no" title="branch not covered" >[]}</span>
+              center={destination.attractions?.[0]?.coords || <span class="branch-1 cbranch-no" title="branch not covered" >[0, 0]}</span>
+              zoom={12}
+            /&gt;
           &lt;/section&gt;
 &nbsp;
           &lt;section className="box"&gt;
             &lt;h2&gt;Budget&lt;/h2&gt;
-            &lt;p&gt;{destination.budget}&lt;/p&gt;
-            &lt;img
-                  src={`${import.meta.env.BASE_URL}${destination.image2}`}
-                  alt={destination.name}
-                /&gt;
+            &lt;p className="budgettext"&gt;{destination.budget}&lt;/p&gt;
           &lt;/section&gt;
+&nbsp;
+          &lt;div className="postition"&gt;
+            &lt;img
+              className='bottomimg'
+              src={`${import.meta.env.BASE_URL}${destination.image2}`}
+              alt={destination.name}
+            /&gt;
+          &lt;/div&gt;
         &lt;/div&gt;
       &lt;/div&gt;
     &lt;/&gt;
@@ -544,7 +592,7 @@ export const DestinationDetailPage = () =&gt; {
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at 2025-12-04T12:17:58.242Z
+                at 2025-12-18T16:15:20.526Z
             </div>
         <script src="../../../prettify.js"></script>
         <script>
