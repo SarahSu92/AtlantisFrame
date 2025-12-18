@@ -18,7 +18,8 @@ Users can click on markers to see the title and description of each attraction. 
 **Client:** React, Vite, SASS
 
 **Server:** Node, Express
-**Testing** Vitest (with coverage reporting)
+
+**Testing:** Vitest (with coverage reporting)
 
 
 ## Badges
