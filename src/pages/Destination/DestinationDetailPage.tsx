@@ -9,7 +9,7 @@ import {
   FiSun,
   FiMessageCircle,
 } from 'react-icons/fi';
-import { AttractionsMap } from '../../components/Footer/AttractionsMap';
+import { AttractionsMap } from '../../components/AttractionsMap';
 
 export const DestinationDetailPage = () => {
   const { id } = useParams<{ id: string }>();
