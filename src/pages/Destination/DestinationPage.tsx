@@ -1,18 +1,41 @@
 
 import { Link } from 'react-router';
 import './Destination.scss';
-import { Destinations } from '../../models/Destinations/DestinationIndex';
+import { DestinationActivities } from '../../models/DestinationActivities';
+import { useState } from 'react';
 
 export const DestinationPage = () => {
-  // Gruppera destinations per region
+  const [search, setSearch] = useState('');
   const regions = ["EUROPE", "NORTH AMERICA", "AFRICA", "ASIA"];
 
+   const filterByActivity = (destinations: typeof DestinationActivities, search: string) =>
+    !search.trim()
+      ? destinations
+      : destinations.filter(dest =>
+          dest.activities.some(activity =>
+            activity.toLowerCase().includes(search.toLowerCase())
+          )
+        );
+
   return (
-    <div>
+    <div className="destination-page">
       <h1>All Destinations</h1>
 
-      {regions.map(region => {
-        const regionDestinations = Destinations.filter(d => d.region === region);
+       <input
+        type="text"
+        placeholder="Search by activity (e.g. hiking, monuments)"
+        value={search}
+        onChange={e => setSearch(e.target.value)}
+        className="search-input"
+      />
+
+       {regions.map(region => {
+        const regionDestinations = filterByActivity(
+          DestinationActivities.filter(d => d.region === region),
+          search
+        );
+
+        if (regionDestinations.length === 0) return null;
 
         return (
           <div key={region}>
@@ -34,3 +57,4 @@ export const DestinationPage = () => {
     </div>
   );
 };
+

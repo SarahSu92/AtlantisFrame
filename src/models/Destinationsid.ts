@@ -16,7 +16,7 @@ export interface Destination {
   description?: string;
   shortDescription?: string;
   longDescription?: string;
-  activities?: string[];
+  activities: string[];
   language: string;
   religion?: string[];
   currency?: string;
@@ -25,7 +25,7 @@ export interface Destination {
   bestTimeToTravel?: string;
   tips?: string[];
   hotels: string[];
-  attractions?: Attraction[];
+  attractions: Attraction[];
   budget?: string;
 }
 

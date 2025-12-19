@@ -1,7 +1,81 @@
+.destination-page {
+  padding: 2rem;
+  max-width: 900px;
+  margin: 0 auto;
+  font-family: sans-serif;
+
+  h1 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+  }
+}
+
+/* Searchfield */
+.destination-page input[type="text"] {
+  display: block;
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto 2rem auto;
+  padding: 0.6rem 1rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  outline: none;
+  transition: border-color 0.2s;
+
+  &:focus {
+    border-color: #0077ff;
+  }
+}
+
+/* Region */
+.destination-page h2 {
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  font-size: 1.4rem;
+}
+
+/* Grid */
 .destination {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     justify-content: center;
     align-items: center;
     text-align: center;  
+}
+
+/* card styling */
+.destination-card {
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  padding: 1rem;
+  transition: transform 0.2s, box-shadow 0.2s;
+
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 14px rgba(0,0,0,0.15);
+  }
+
+  h3 {
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+    font-size: 1.1rem;
+
+     &:hover {
+    color: #f94a0b;
+  }
+
+  }
+}
+
+
+
+
+
+/* Länk styling */
+.destination-card a {
+  text-decoration: none;
+  color: inherit;
+  display: block;
 }

@@ -10,4 +10,5 @@ import { Vancouver } from './Vancouver';
 import { Montana } from './Montana';
 
 
+
 export const Destinations = [Azores, Maldives, Morocco, Singapore, Seychelles, Aruba, Boston, Montana, Capri, Vancouver];
