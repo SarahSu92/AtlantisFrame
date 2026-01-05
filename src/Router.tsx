@@ -6,6 +6,7 @@ import { DestinationDetailPage } from './pages/Destination/DestinationDetailPage
 import { AboutPage } from './pages/About/AboutPage';
 import { ContactPage } from './pages/Contact/ContactPage';
 import { Layout } from './layout/Layout';
+import { ScrollToTop } from './components/ScrollToTop';
 
 export const Router = createBrowserRouter(
   [
@@ -16,23 +17,48 @@ export const Router = createBrowserRouter(
       children: [
         {
           path: '/',
-          element: <HomePage />,
+          element: (
+            <>
+              <ScrollToTop />
+              <HomePage />
+            </>
+          ),
         },
         {
           path: '/DestinationPage',
-          element: <DestinationPage />,
+          element: (
+            <>
+            <ScrollToTop />
+            <DestinationPage />
+            </>
+          ),
         },
         {
           path: '/destination/:id',
-          element: <DestinationDetailPage />,
+          element: (
+            <>
+             <ScrollToTop />
+             <DestinationDetailPage />
+            </>
+          ),
         },
         {
           path: '/AboutPage',
-          element: <AboutPage />,
+          element: (
+            <>
+            <ScrollToTop />
+            <AboutPage />
+            </>
+          ),
         },
         {
           path: '/ContactPage',
-          element: <ContactPage />,
+          element: (
+            <>
+            <ScrollToTop />
+            <ContactPage />
+            </>
+          ),
         },
       ],
     },
