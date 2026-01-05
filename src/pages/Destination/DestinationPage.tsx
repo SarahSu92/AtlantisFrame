@@ -1,18 +1,20 @@
-
 import { Link } from 'react-router';
 import './Destination.scss';
-import { DestinationActivities } from '../../models/DestinationActivities';
+import { DestinationCards } from '../../models/DestinationCard';
 import { useState } from 'react';
 
 export const DestinationPage = () => {
   const [search, setSearch] = useState('');
-  const regions = ["EUROPE", "NORTH AMERICA", "AFRICA", "ASIA"];
+  const regions = ['EUROPE', 'NORTH AMERICA', 'AFRICA', 'ASIA'];
 
-   const filterByActivity = (destinations: typeof DestinationActivities, search: string) =>
+  const filterByActivity = (
+    destinations: typeof DestinationCards,
+    search: string
+  ) =>
     !search.trim()
       ? destinations
-      : destinations.filter(dest =>
-          dest.activities.some(activity =>
+      : destinations.filter((dest) =>
+          dest.activities.some((activity) =>
             activity.toLowerCase().includes(search.toLowerCase())
           )
         );
@@ -20,18 +22,21 @@ export const DestinationPage = () => {
   return (
     <div className="destination-page">
       <h1>All Destinations</h1>
+      <h4 className="searchactivity">
+        Search by activity: hiking, monuments, beaches, urban culture.
+      </h4>
 
-       <input
+      <input
         type="text"
-        placeholder="Search by activity (e.g. hiking, monuments)"
+        placeholder="type activity..."
         value={search}
-        onChange={e => setSearch(e.target.value)}
+        onChange={(e) => setSearch(e.target.value)}
         className="search-input"
       />
 
-       {regions.map(region => {
+      {regions.map((region) => {
         const regionDestinations = filterByActivity(
-          DestinationActivities.filter(d => d.region === region),
+          DestinationCards.filter((d) => d.region === region),
           search
         );
 
@@ -41,11 +46,26 @@ export const DestinationPage = () => {
           <div key={region}>
             <h2>{region}</h2>
             <div className="destination">
-              {regionDestinations.map(dest => (
+              {regionDestinations.map((dest) => (
                 <div key={dest.id} className="destination-card">
+                  <img
+                    className="img"
+                    src={
+                      dest.image
+                        ? `${import.meta.env.BASE_URL}${dest.image}`
+                        : `${import.meta.env.BASE_URL}placeholder.jpg`
+                    }
+                    alt={dest.name}
+                  />
                   <Link to={`/destination/${dest.id}`}>
                     <h3>{dest.name}</h3>
-                    <p>{dest.activities}</p>
+                    <div className="activities">
+                      {dest.activities.map((activity) => (
+                        <span key={activity} className="activity">
+                          {activity}
+                        </span>
+                      ))}
+                    </div>
                     <p>{dest.shortDescription}</p>
                   </Link>
                 </div>
@@ -57,4 +77,3 @@ export const DestinationPage = () => {
     </div>
   );
 };
-
