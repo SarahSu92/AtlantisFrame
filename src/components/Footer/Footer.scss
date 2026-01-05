@@ -1,10 +1,13 @@
 .contact-wrapper {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
   justify-content: center;
   align-items: center;
   text-align: center;
   align-items: start;
+  padding-bottom: 1rem;
+}
+
+.underline {
+  text-decoration: underline;
 }
 
 .links {
@@ -12,10 +15,7 @@
   text-decoration: none;
   transition: color 0.3s;
   font-size: 1rem;
-  padding-bottom: 1rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  padding-left: 1rem;
 
 
   &:hover {
@@ -28,27 +28,20 @@
   text-decoration: none;
   transition: color 0.3s;
   font-size: 1rem;
-  padding-bottom: 1rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  padding-left: 1rem;
 
   &:hover {
     color: #f94a0b;
   }
 }
 
-.contactus {
-  justify-self: center;
-  text-align: center;
-  flex-direction: column;
-  grid-column: 1 / -1;
-  padding-bottom: 1rem;
-}
-
 .footerp {
   font-size: 1rem;
   line-height: normal;
+}
+
+.footercontent {
+  padding-bottom: 1.2rem;
 }
 
 .copyright {
@@ -63,7 +56,7 @@
 @media screen and (min-width: 768px) {
   .contact-wrapper {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     justify-content: center;
     align-items: center;
     text-align: center;
@@ -72,9 +65,7 @@
   }
 
   .contactus {
-  justify-self: center;
-  text-align: center;
-  grid-column: auto;
-  padding-bottom: 0;
-}
+    position: relative;
+    left: 50%;
+  }
 }

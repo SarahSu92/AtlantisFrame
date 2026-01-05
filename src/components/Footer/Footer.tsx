@@ -5,7 +5,7 @@ export const Footer = () => {
     <>
       <div className="contact-wrapper">
         <div className="footercontent">
-          <h4>Links</h4>
+          <h4 className='underline'>Links</h4>
           <a className="links" href="#">
             Home
           </a>
@@ -21,7 +21,7 @@ export const Footer = () => {
         </div>
 
         <div className="footercontent">
-          <h4>Follow Us</h4>
+          <h4 className='underline'>Follow Us</h4>
           <a className="followus" href="#">
             Facebook
           </a>
@@ -34,7 +34,7 @@ export const Footer = () => {
         </div>
 
         <div className="contactus">
-          <h4>Contact Us</h4>
+          <h4 className='underline'>Contact Us</h4>
           <p className="footerp">AtlantisFrame</p>
           <p className="footerp">
             Östermalmsgatan 12, 114 42 Stockholm, Sweden
