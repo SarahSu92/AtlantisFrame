@@ -10,13 +10,19 @@
     font-size: 1.5rem;
   }
 
- .region {
-  font-size: 1.2rem;
- }
+  p {
+    line-height: 1.7;
+  }
 
- p {
-  line-height: 1.7;
- }
+  .region {
+    font-size: 1.2rem;
+  }
+
+  .searchtext {
+    margin: 0 1rem 0.5rem 0;
+    font-size: 1rem;
+
+  }
 }
 
 
@@ -25,8 +31,8 @@
 .destination-page input[type="text"] {
   display: block;
   width: 100%;
-  max-width: 280px;
-  margin: 0 auto 2rem auto;
+  max-width: 250px;
+  margin: 0 0 2rem 0;
   padding: 0.6rem 1rem;
   font-size: 1rem;
   border: 1px solid #ccc;
@@ -35,8 +41,8 @@
 
   &:focus {
     border-color: #f94a0b;
-     border-width: 2px;
-    
+    border-width: 2px;
+
   }
 }
 
@@ -53,24 +59,24 @@
 
 /* Grid */
 .destination {
-    display: grid;
-    grid-template-columns: repeat(1, 1fr);
-    gap: 2rem;
-    justify-content: center;
-    align-items: center;
-    text-align: center; 
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 2rem;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
 
 /* card styling */
 .destination-card {
   background-color: #fff;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   padding: 2rem;
   transition: transform 0.2s, box-shadow 0.2s;
 
   &:hover {
     transform: translateY(-4px);
-    box-shadow: 0 6px 14px rgba(0,0,0,0.15);
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.15);
   }
 
   h3 {
@@ -78,16 +84,16 @@
     margin-bottom: 0.5rem;
     font-size: 1.1rem;
 
-     &:hover {
-    color: #f94a0b;
-  }
+    &:hover {
+      color: #f94a0b;
+    }
   }
 }
 
 .activities {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;  
+  justify-content: center;
 }
 
 .activity {
@@ -98,9 +104,9 @@
 }
 
 .activity:not(:last-child)::after {
-  content: "♦"; 
+  content: "♦";
   color: #f94a0b;
-  padding-left: 0.5rem; 
+  padding-left: 0.5rem;
 }
 
 .destination-card a {
@@ -109,33 +115,42 @@
   display: block;
 
   &:focus {
-   outline: 2px solid #f94a0b;
-   outline-offset: 2px;
-   border-radius: 0;
-    
+    outline: 2px solid #f94a0b;
+    outline-offset: 2px;
+    border-radius: 0;
+
   }
 }
 
 .img {
   width: 100%;
-  height: 180px; 
-  object-fit: cover; 
+  height: 180px;
+  object-fit: cover;
   padding-bottom: 0.5rem;
 }
 
 @media (min-width: 768px) {
   .destination-page {
-  padding: 2rem;
-  max-width: 900px;
-  margin: 0 auto;
-  font-family: sans-serif;
+    padding: 2rem;
+    max-width: 900px;
+    margin: 0 auto;
+    font-family: sans-serif;
 
-  h1 {
-    text-align: center;
-    margin-bottom: 1.5rem;
-    font-size: 2rem;
+    h1 {
+      text-align: center;
+      margin-bottom: 1.5rem;
+      font-size: 2rem;
+    }
+
+    .region {
+      font-size: 1.5rem;
+    }
+
+    .searchtext {
+      margin: 0 1rem 0.5rem 0;
+      font-size: 1.1rem;
+    }
   }
-}
 
   .destination {
     display: grid;
@@ -143,29 +158,23 @@
     gap: 2rem;
     justify-content: center;
     align-items: center;
-    text-align: center; 
-}
-
-.destination-page input[type="text"] {
-  display: block;
-  width: 100%;
-  max-width: 400px;
-  margin: 0 auto 2rem auto;
-  padding: 0.6rem 1rem;
-  font-size: 1rem;
-  border: 1px solid #ccc;
-  border-radius: 6px;
-  outline: none;
-  transition: border-color 0.2s;
-
-  &:focus {
-    border-color: #0077ff;
+    align-items: stretch;
+    text-align: center;
   }
-}
-.search {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-weight: 300;
-}
+
+  .destination-page input[type="text"] {
+    display: block;
+    width: 100%;
+    max-width: 250px;
+    margin: 0 0 2rem 0;
+    padding: 0.6rem 1rem;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    outline: none;
+    transition: border-color 0.2s;
+
+    &:focus {
+      border-color: #f94a0b;
+    }
+  }
 }

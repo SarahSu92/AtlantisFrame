@@ -22,7 +22,7 @@ export const DestinationPage = () => {
   return (
     <div className="destination-page">
       <h1>All Destinations</h1>
-      <p className="search">
+      <p className="searchtext">
         Search by activity: hiking, monuments, beaches, urban culture.
       </p>
 
