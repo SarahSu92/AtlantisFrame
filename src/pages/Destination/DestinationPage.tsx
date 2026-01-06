@@ -26,7 +26,12 @@ export const DestinationPage = () => {
         Search by activity: hiking, monuments, beaches, urban culture.
       </p>
 
+      <label htmlFor="activity-search" className="sr-only">
+        Search destinations by activity
+      </label>
+
       <input
+        id="activity-search"
         type="text"
         placeholder="type activity..."
         value={search}
@@ -44,7 +49,7 @@ export const DestinationPage = () => {
 
         return (
           <div key={region}>
-            <h2 className='region'>{region}</h2>
+            <h2 className="region">{region}</h2>
             <div className="destination">
               {regionDestinations.map((dest) => (
                 <div key={dest.id} className="destination-card">
@@ -61,9 +66,9 @@ export const DestinationPage = () => {
                     <h3>{dest.name}</h3>
                     <div className="activities">
                       {dest.activities.map((activity) => (
-                        <span key={activity} className="activity">
+                        <li key={activity} className="activity">
                           {activity}
-                        </span>
+                        </li>
                       ))}
                     </div>
                     <p>{dest.shortDescription}</p>
