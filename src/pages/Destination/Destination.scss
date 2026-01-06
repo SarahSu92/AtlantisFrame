@@ -1,38 +1,47 @@
 .destination-page {
-  padding: 2rem;
+  padding: 1rem;
   max-width: 900px;
   margin: 0 auto;
   font-family: sans-serif;
 
   h1 {
     text-align: center;
-    margin-bottom: 1.5rem;
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
   }
+
+ .region {
+  font-size: 1.2rem;
+ }
+
+ p {
+  line-height: 1.7;
+ }
 }
+
+
 
 /* Searchfield */
 .destination-page input[type="text"] {
   display: block;
   width: 100%;
-  max-width: 400px;
+  max-width: 280px;
   margin: 0 auto 2rem auto;
   padding: 0.6rem 1rem;
   font-size: 1rem;
   border: 1px solid #ccc;
-  border-radius: 6px;
   outline: none;
   transition: border-color 0.2s;
 
   &:focus {
-    border-color: #0077ff;
+    border-color: #f94a0b;
+     border-width: 2px;
+    
   }
 }
 
-.searchactivity {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-weight: 300;
+.search {
+  padding: 0rem 1rem 0rem 1rem;
 }
 
 /* Region */
@@ -45,7 +54,7 @@
 /* Grid */
 .destination {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(1, 1fr);
     gap: 2rem;
     justify-content: center;
     align-items: center;
@@ -98,10 +107,65 @@
   text-decoration: none;
   color: inherit;
   display: block;
+
+  &:focus {
+   outline: 2px solid #f94a0b;
+   outline-offset: 2px;
+   border-radius: 0;
+    
+  }
 }
 
 .img {
   width: 100%;
   height: 180px; 
   object-fit: cover; 
+  padding-bottom: 0.5rem;
+}
+
+@media (min-width: 768px) {
+  .destination-page {
+  padding: 2rem;
+  max-width: 900px;
+  margin: 0 auto;
+  font-family: sans-serif;
+
+  h1 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    font-size: 2rem;
+  }
+}
+
+  .destination {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    justify-content: center;
+    align-items: center;
+    text-align: center; 
+}
+
+.destination-page input[type="text"] {
+  display: block;
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto 2rem auto;
+  padding: 0.6rem 1rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  outline: none;
+  transition: border-color 0.2s;
+
+  &:focus {
+    border-color: #0077ff;
+  }
+}
+.search {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 300;
+}
 }

@@ -8,6 +8,14 @@
 
 .underline {
   text-decoration: underline;
+  color: #fff;
+
+   &:focus {
+   outline: 2px solid #f94a0b;
+   outline-offset: 2px;
+   border-radius: 0;
+    
+  }
 }
 
 .links {
@@ -15,8 +23,14 @@
   text-decoration: none;
   transition: color 0.3s;
   font-size: 1rem;
-  padding-left: 1rem;
+  margin-left: 1rem;
 
+  &:focus {
+   outline: 2px solid #f94a0b;
+   outline-offset: 2px;
+   border-radius: 0;
+    
+  }
 
   &:hover {
     color: #f94a0b;
@@ -28,7 +42,14 @@
   text-decoration: none;
   transition: color 0.3s;
   font-size: 1rem;
-  padding-left: 1rem;
+  margin-left: 1rem;
+
+   &:focus {
+   outline: 2px solid #f94a0b;
+   outline-offset: 2px;
+   border-radius: 0;
+    
+  }
 
   &:hover {
     color: #f94a0b;

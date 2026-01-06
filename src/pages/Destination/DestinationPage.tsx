@@ -22,9 +22,9 @@ export const DestinationPage = () => {
   return (
     <div className="destination-page">
       <h1>All Destinations</h1>
-      <h4 className="searchactivity">
+      <p className="search">
         Search by activity: hiking, monuments, beaches, urban culture.
-      </h4>
+      </p>
 
       <input
         type="text"
@@ -44,7 +44,7 @@ export const DestinationPage = () => {
 
         return (
           <div key={region}>
-            <h2>{region}</h2>
+            <h2 className='region'>{region}</h2>
             <div className="destination">
               {regionDestinations.map((dest) => (
                 <div key={dest.id} className="destination-card">

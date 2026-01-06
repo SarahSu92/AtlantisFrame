@@ -1,27 +1,28 @@
 import './Footer.scss';
+import { Link } from 'react-router';
 
 export const Footer = () => {
   return (
     <>
       <div className="contact-wrapper">
         <div className="footercontent">
-          <h4 className='underline'>Links</h4>
-          <a className="links" href="#">
-            Home
-          </a>
-          <a className="links" href="#">
-            About us
-          </a>
-          <a className="links" href="#">
-            Destinations
-          </a>
-          <a className="links" href="#">
-            Contact
-          </a>
+          <h4 className="underline">Links</h4>
+          <Link to="/" className="links">
+              Home
+            </Link>
+            <Link to="/DestinationPage" className="links">
+              Destinations
+            </Link>
+           <Link to="/AboutPage" className="links">
+              About us
+            </Link>
+          <Link to="/ContactPage" className="links">
+              Contact
+            </Link>
         </div>
 
         <div className="footercontent">
-          <h4 className='underline'>Follow Us</h4>
+          <h4 className="underline">Follow Us</h4>
           <a className="followus" href="#">
             Facebook
           </a>
@@ -34,7 +35,11 @@ export const Footer = () => {
         </div>
 
         <div className="contactus">
-          <h4 className='underline'>Contact Us</h4>
+          <h4>
+            <Link to="/ContactPage" className="underline">
+              Contact Us
+            </Link>
+          </h4>
           <p className="footerp">AtlantisFrame</p>
           <p className="footerp">
             Östermalmsgatan 12, 114 42 Stockholm, Sweden
