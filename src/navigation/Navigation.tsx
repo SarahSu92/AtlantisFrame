@@ -11,37 +11,34 @@ export const Navigation = ({ open, setOpen }: NavigationProps) => {
   const menuRef = useRef<HTMLUListElement>(null);
   const buttonRef = useRef<HTMLButtonElement>(null);
 
-  // Make sure focus stays in menu when active
-  useEffect(() => {
-    const handleKeyDown = (e: KeyboardEvent) => {
-      if (!open || !menuRef.current) return;
+// Make sure focus stays in menu when active
+useEffect(() => {
+  if (!open) return;
 
-      const focusableElements =
-        menuRef.current.querySelectorAll<HTMLElement>('a, button');
+  // Focus close btn
+  buttonRef.current?.focus();
 
-      const first = focusableElements[0];
-      const last = focusableElements[focusableElements.length - 1];
+  const handleKeyDown = (e: KeyboardEvent) => {
+    if (!menuRef.current || !buttonRef.current) return;
 
-      if (e.key === 'Tab') {
-        if (e.shiftKey && document.activeElement === first) {
-          e.preventDefault();
-          last.focus();
-        } else if (!e.shiftKey && document.activeElement === last) {
-          e.preventDefault();
-          first.focus();
-        }
+    const focusable = [buttonRef.current, ...Array.from(menuRef.current.querySelectorAll<HTMLElement>('a'))];
+    const first = focusable[0];
+    const last = focusable[focusable.length - 1];
+
+    if (e.key === 'Tab') {
+      if (e.shiftKey && document.activeElement === first) {
+        e.preventDefault(); last.focus();
+      } else if (!e.shiftKey && document.activeElement === last) {
+        e.preventDefault(); first.focus();
       }
+    } else if (e.key === 'Escape') {
+      setOpen(false);
+    }
+  };
 
-      // ESC close menu
-      if (e.key === 'Escape') {
-        setOpen(false);
-        buttonRef.current?.focus(); 
-      }
-    };
-
-    document.addEventListener('keydown', handleKeyDown);
-    return () => document.removeEventListener('keydown', handleKeyDown);
-  }, [open, setOpen]);
+  document.addEventListener('keydown', handleKeyDown);
+  return () => document.removeEventListener('keydown', handleKeyDown);
+}, [open, setOpen]);
 
   return (
     <nav>
