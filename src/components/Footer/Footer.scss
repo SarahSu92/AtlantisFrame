@@ -3,7 +3,6 @@
   align-items: center;
   text-align: center;
   align-items: start;
-  padding-bottom: 1rem;
 }
 
 .underline {
@@ -62,7 +61,7 @@
 }
 
 .footercontent {
-  padding-bottom: 1.2rem;
+  padding-bottom: 1rem;
 }
 
 .copyright {
@@ -71,6 +70,19 @@
   align-items: center;
   text-align: center;
   font-size: 0.9rem;
+  position: relative;
+  padding-top: 1rem;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;            
+    left: 50%;         
+    transform: translateX(-50%); 
+    width: 90%;        
+    height: 1px;       
+    background-color: #fff; 
+  }
 
 }
 

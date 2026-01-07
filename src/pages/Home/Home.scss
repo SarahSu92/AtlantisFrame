@@ -1,0 +1,119 @@
+.hero {
+  position: relative;
+  width: 100%;
+  height: 80vh;
+  overflow: hidden;
+  text-align: center;
+  background-image: url('/heroimage.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  .hero-overlay {
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.3);
+    z-index: 1;
+  }
+
+  .hero-content {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #fff;
+    z-index: 2;
+
+    h1 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+
+    p {
+      font-size: 1.2rem;
+      margin-bottom: 2rem;
+    }
+  }
+}
+
+.herobtn {
+  color: #fff;
+  text-decoration: none;
+  border: 2px solid;
+  padding: 1rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  font-size: 1.2rem;
+  font-weight: bold;
+  transition: background-color 0.4s ease, 
+              color 0.4s ease, 
+              border-color 0.4s ease;  
+
+  &:focus {
+    outline: 2px solid #ff8a65;
+    outline-offset: 2px;
+    border-radius: 0;
+  }
+
+  &:hover {
+    color: #fff;
+    background-color: #ff8a65;
+    border-color: #ff8a65;
+  }
+}
+
+.hero-wave {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  z-index: 1;
+
+  svg {
+    display: block;
+    width: 100%;
+    height: 100px;
+  }
+}
+
+.herocards {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.dest-cards {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 2rem;
+  justify-content: center;
+  align-items: center;
+  align-items: stretch;
+  text-align: center;
+}
+
+.heroinfo {
+  max-width: 900px;
+
+}
+
+@media (min-width: 768px) {
+  .dest-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    justify-content: center;
+    align-items: center;
+    align-items: stretch;
+    text-align: center;
+  }
+
+  .hero-wave {
+  svg {
+     height: 150px;
+  }
+}
+}
