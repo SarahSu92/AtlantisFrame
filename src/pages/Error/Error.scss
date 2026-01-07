@@ -1,0 +1,26 @@
+.errorpage {
+  min-height: 80vh;          
+  display: flex;
+  flex-direction: column;    
+  justify-content: center;   
+  align-items: center;       
+  text-align: center;
+  padding: 2rem;             
+}
+
+.errorbtn {
+    color: #f94a0b;
+    text-decoration: none;
+    border: 2px solid;
+    padding: 0.5rem;
+
+     &:focus {
+      outline: 2px solid #000;
+      outline-offset: 2px;
+      border-radius: 0;
+    }
+
+    &:hover {
+      color: #000;
+    }
+}
