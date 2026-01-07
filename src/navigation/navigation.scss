@@ -141,6 +141,12 @@ nav {
       display: none;
     }
 
+    ul,
+    ol {
+      list-style: none;
+      padding-left: 0;
+    }
+
     .tablet-desktop {
       position: static;
       width: auto;
