@@ -11,9 +11,9 @@ export const HomePage = () => {
       <section className="hero">
          <div className="hero-overlay">
         <div className="hero-content">
-          <h1>Adventure Awaits!</h1>
+          <h1>ADVENTURE AWAITS!</h1>
           <p>
-            Discover new destinations, meet new cultures, and have fun along the way.
+            DISCOVER NEW DESTINATIONS, MEET NEW CULTURES, AND HAVE FUN ALONG THE WAY.
           </p>
           <Link to="/DestinationPage" className="herobtn">
             EXPLORE NOW
@@ -30,7 +30,11 @@ export const HomePage = () => {
         </div>
       </section>
 
-      <div className="herocards">
+      <section className="herocards">
+        <div className='cathero'>
+        <h2 className='cat'>DESTINATIONS</h2>
+        <p>Pick a country and start exploring!</p>
+        </div>
         <div className="dest-cards">
           {DestinationCards.slice(0, 3).map((dest: DestinationCard) => (
             <div key={dest.id} className="destination-card">
@@ -53,9 +57,8 @@ export const HomePage = () => {
             </div>
           ))}
         </div>
-      </div>
+      </section>
       <div className="heroinfo">
-        <h2>About </h2>
         <Link to={`/DestinationPage`} className="">
           See all our destinations!
         </Link>

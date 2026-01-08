@@ -49,7 +49,9 @@ export const DestinationPage = () => {
 
         return (
           <div key={region}>
-            <h2 className="region">{region}</h2>
+            <div className='cathero'>
+            <h2 className="cat">{region}</h2>
+            </div>
             <div className="destination">
               {regionDestinations.map((dest) => (
                 <div key={dest.id} className="destination-card">

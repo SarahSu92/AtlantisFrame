@@ -58,16 +58,16 @@ h1 {
   }
 }
 
-
-.box {
-  margin-bottom: 5rem;
-}
-
-h2 {
+.catdest {
   font-size: 1.5rem;
   margin-bottom: 1rem;
   border-left: 4px solid #2c6cf2;
   padding-left: 0.6rem;
+}
+
+
+.box {
+  margin-bottom: 5rem;
 }
 
 ul {
@@ -204,7 +204,7 @@ p {
     margin-bottom: 0.3rem;
   }
 
-  h2 {
+  .catdest {
     font-size: 1.8rem;
     margin-bottom: 1rem;
     border-left: 4px solid #2c6cf2;

@@ -12,7 +12,7 @@
   .hero-overlay {
     position: absolute;
     inset: 0;
-    background-color: rgba(0, 0, 0, 0.3);
+    background-color: rgba(0, 0, 0, 0.5);
     z-index: 1;
   }
 
@@ -30,11 +30,13 @@
       justify-content: center;
       align-items: center;
       text-align: center;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
     }
 
     p {
       font-size: 1.2rem;
       margin-bottom: 2rem;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
     }
   }
 }
@@ -47,9 +49,9 @@
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
   font-size: 1.2rem;
   font-weight: bold;
-  transition: background-color 0.4s ease, 
-              color 0.4s ease, 
-              border-color 0.4s ease;  
+  transition: background-color 0.4s ease,
+    color 0.4s ease,
+    border-color 0.4s ease;
 
   &:focus {
     outline: 2px solid #ff8a65;
@@ -97,8 +99,64 @@
 
 .heroinfo {
   max-width: 900px;
-
 }
+
+.cathero {
+  text-align: center;
+  margin: 4rem 0;
+
+  p {
+    font-size: 1.2rem;
+    color: #666;
+    
+  }
+}
+
+.cat {
+  position: relative;
+  display: inline-block;
+  font-size: 2rem;
+  font-weight: 700;
+  margin: 0;
+  padding: 0 2rem;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    width: 200px;
+    height: 2px;
+    background-color: #ddd;
+  }
+
+  &::before {
+    left: -200px;
+    background: linear-gradient(
+      to right,
+      transparent,
+      #ccc 80%,
+      #ccc);
+  }
+
+  &::after {
+    right: -200px;
+     background: linear-gradient(
+      to left,
+      transparent,
+      #ccc 80%,
+      #ccc);
+  }
+}
+
+
+
+
+
+
+
+
+
 
 @media (min-width: 768px) {
   .dest-cards {
@@ -112,8 +170,8 @@
   }
 
   .hero-wave {
-  svg {
-     height: 150px;
+    svg {
+      height: 150px;
+    }
   }
-}
 }

@@ -36,13 +36,13 @@ export const DestinationDetailPage = () => {
 
         <div className="content">
           <section className="box">
-            <h2>About {destination.name}</h2>
+            <h2 className='catdest'>About {destination.name}</h2>
             <p className="text">{destination.longDescription}</p>
             <h3 className="tips">Tips</h3>
             <p className="text">{destination.tips}</p>
           </section>
 
-          <h2>Quick Facts</h2>
+          <h2 className='catdest'>Quick Facts</h2>
 
           <div className="facts-grid">
             <div className="fact-item">
@@ -107,7 +107,7 @@ export const DestinationDetailPage = () => {
           </div>
 
           <section className="box">
-            <h2>Best Time to Travel</h2>
+            <h2 className='catdest'>Best Time to Travel</h2>
             <ul className="text">
               <li>May–September: Best weather for sightseeing.</li>
               <li>December–February: Ideal for skiing.</li>
@@ -116,7 +116,7 @@ export const DestinationDetailPage = () => {
           </section>
 
           <section className="box">
-            <h2>Hotels</h2>
+            <h2 className='catdest'>Hotels</h2>
             <div className="hotels-grid">
               {destination.hotels.map((hotel) => (
                 <a
@@ -144,7 +144,7 @@ export const DestinationDetailPage = () => {
           </section>
 
           <section className="box attractions-section">
-            <h2 id="attractions-map-label">What to See & Do</h2>
+            <h2 id="attractions-map-label" className='catdest'>What to See & Do</h2>
             <p>
               Use zoom in and out to see all attractions. Click on the
               pointer/marker to read more.{' '}
@@ -189,7 +189,7 @@ export const DestinationDetailPage = () => {
           </section>
 
           <section className="box">
-            <h2>Budget</h2>
+            <h2 className='catdest'>Budget</h2>
             <p className="budgettext">{destination.budget}</p>
           </section>
 
