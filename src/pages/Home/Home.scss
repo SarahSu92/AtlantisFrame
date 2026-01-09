@@ -81,25 +81,6 @@
   }
 }
 
-.herocards {
-  max-width: 900px;
-  margin: 0 auto;
-}
-
-.dest-cards {
-  display: grid;
-  grid-template-columns: repeat(1, 1fr);
-  gap: 2rem;
-  justify-content: center;
-  align-items: center;
-
-  text-align: center;
-}
-
-.heroinfo {
-  max-width: 900px;
-}
-
 .cathero {
   text-align: center;
   padding: 0.5rem;
@@ -150,11 +131,39 @@
   }
 }
 
-.container {
+.hero-box {
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 2rem;
+}
+
+.hero-dest {
+  max-width: 900px;
+  margin-inline: auto; 
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+.hero-card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  align-items: center; 
+  text-align: center;  
+  padding: 1rem;
+  align-items: stretch;
+
+  h3 {
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+    font-size: 1.1rem;
+
+    &:hover {
+      color: #f94a0b;
+    }
+  }
 }
 
 .btn {
@@ -182,25 +191,31 @@
 }
 
 @media (min-width: 768px) {
-  .hero-content {
-    p {
-      max-width: 500px;
-      margin-left: auto; 
-      margin-right: auto; 
-      text-align: center;
+  .hero-dest {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  align-items: stretch;
+  max-width: 900px;
+  margin: 0 auto;
+}
 
+.hero-card {
+  background-color: #fff;
+  padding-bottom: 2rem;
+
+  h3 {
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+    font-size: 1.1rem;
+
+    &:hover {
+      color: #f94a0b;
     }
   }
-
-  .dest-cards {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 2rem;
-    justify-content: center;
-    align-items: center;
-    align-items: stretch;
-    text-align: center;
-  }
+}
 
   .hero-wave {
     svg {
@@ -212,7 +227,7 @@
   }
 }
 
-@media (min-width: 768px) {
+@media (min-width: 1024px) {
   .hero-wave {
     svg {
       display: block;
@@ -225,5 +240,5 @@
   .cathero {
     text-align: center;
     margin: 0;
-}
+  }
 }
