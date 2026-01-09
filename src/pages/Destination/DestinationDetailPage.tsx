@@ -114,10 +114,10 @@ export const DestinationDetailPage = () => {
                       />
                     </div>
                     <div className="hotel-card-content">
-                      <h3>{hotel.name}</h3>
-                      <p className="hotel-description">{hotel.description}</p>
+                      <h3>{hotel.name}</h3>                      
                     </div>
                   </a>
+                  <p className="hotel-description">{hotel.description}</p>
                 </article>
               ))}
             </div>

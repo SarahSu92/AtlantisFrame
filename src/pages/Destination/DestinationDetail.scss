@@ -145,6 +145,10 @@ p {
   overflow: hidden;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 
+  a {
+     text-decoration: none;
+  }
+
   &:hover {
     transform: translateY(-4px);
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
@@ -166,19 +170,15 @@ p {
 }
 
 .hotel-card-content {
-  padding: 1rem 0rem;
-
   h3 {
-    margin: 0.5rem;
-    font-size: 1.1rem;
+    margin-top: 1rem;
+    margin-bottom: 0;
+    font-size: 1.2rem;
     color: #f94a0b;
-  }
-
-  .hotel-description {
-    margin: 0.5rem;
-    font-size: 1rem;
-  }
+  }  
 }
+
+
 
 @media (min-width: 768px) {
   .facts-grid {
