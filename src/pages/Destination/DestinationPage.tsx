@@ -48,37 +48,42 @@ export const DestinationPage = () => {
         if (regionDestinations.length === 0) return null;
 
         return (
-          <div key={region}>
-            <div className='cathero'>
-            <h2 className="cat">{region}</h2>
+          <section key={region} className="region-section">
+            <div className="cathero">
+              <h2 className="cat">{region}</h2>
             </div>
+
             <div className="destination">
               {regionDestinations.map((dest) => (
-                <div key={dest.id} className="destination-card">
-                  <img
-                    className="img"
-                    src={
-                      dest.image
-                        ? `${import.meta.env.BASE_URL}${dest.image}`
-                        : `${import.meta.env.BASE_URL}placeholder.jpg`
-                    }
-                    alt={dest.name}
-                  />
+                <article key={dest.id} className="destination-card">
                   <Link to={`/destination/${dest.id}`}>
+                    <img
+                      className="img"
+                      src={
+                        dest.image
+                          ? `${import.meta.env.BASE_URL}${dest.image}`
+                          : `${import.meta.env.BASE_URL}placeholder.jpg`
+                      }
+                      alt={dest.name}
+                    />
                     <h3>{dest.name}</h3>
-                    <div className="activities">
+                  </Link>
+
+                  {dest.activities.length > 0 && (
+                    <ul className="activities">
                       {dest.activities.map((activity) => (
                         <li key={activity} className="activity">
                           {activity}
                         </li>
                       ))}
-                    </div>
-                    <p>{dest.shortDescription}</p>
-                  </Link>
-                </div>
+                    </ul>
+                  )}
+
+                  <p>{dest.shortDescription}</p>
+                </article>
               ))}
             </div>
-          </div>
+          </section>
         );
       })}
     </div>

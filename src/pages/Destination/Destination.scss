@@ -11,8 +11,8 @@
   }
 
   .searchtext {
-    margin: 0 1rem 0.5rem 0;
     font-size: 1rem;
+    margin-left: 1rem;
 
   }
 }
@@ -22,7 +22,7 @@
   display: block;
   width: 100%;
   max-width: 250px;
-  margin: 0 0 2rem 0;
+  margin-left: 1rem;
   padding: 0.6rem 1rem;
   font-size: 1rem;
   border: 1px solid #ccc;
@@ -60,12 +60,18 @@
 
 /* card styling */
 .destination-card {
-  background-color: #fff;
-  padding: 2rem;
-  
+  display: flex;
+    flex-direction: column;
+    height: 100%;
+    align-items: center;
+    text-align: center;
+    padding: 1rem;
+    align-items: stretch;
+
+
+
   h3 {
-    margin-top: 0;
-    margin-bottom: 0.5rem;
+    margin: 0.5rem 0 0.5rem 0;
     font-size: 1.1rem;
 
     &:hover {
@@ -75,14 +81,18 @@
 }
 
 .activities {
-  display: flex;
+  display: inline-flex;
   flex-wrap: wrap;
   justify-content: center;
+  gap: 0.5rem;
+  padding: 0;
+  margin: 0.5rem 0 0 0;
+  list-style: none;
 }
 
 .activity {
   color: #f94a0b;
-  padding: 0.5rem 0rem 0rem 0.5rem;
+  position: relative;
   font-size: 1rem;
   font-weight: 500;
   list-style: none;
@@ -91,7 +101,7 @@
 .activity:not(:last-child)::after {
   content: "♦";
   color: #f94a0b;
-  padding-left: 0.5rem;
+  margin-left: 0.5rem;
 }
 
 .destination-card a {
@@ -109,7 +119,7 @@
 
 .img {
   width: 100%;
-  height: 180px;
+  height: 220px;
   object-fit: cover;
   padding-bottom: 0.5rem;
 }
@@ -128,7 +138,6 @@
     }
 
     .searchtext {
-      margin: 0 1rem 0.5rem 0;
       font-size: 1.1rem;
     }
   }
@@ -147,7 +156,6 @@
     display: block;
     width: 100%;
     max-width: 250px;
-    margin: 0 0 2rem 0;
     padding: 0.6rem 1rem;
     font-size: 1rem;
     border: 1px solid #ccc;

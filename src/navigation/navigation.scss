@@ -11,8 +11,8 @@ nav {
     font-size: 1.5rem;
     color: #fff;
     text-decoration: none;
-    margin-top: -0.2rem;
-    
+    margin-top: -0.3rem;
+
 
     &:focus {
       outline: 2px solid #f94a0b;
@@ -140,11 +140,11 @@ nav {
       display: none;
     }
 
-     .logo {
-    font-size: 1.8rem;
-    margin-left: 1rem;
-    
-     }
+    .logo {
+      font-size: 1.5rem;
+      margin-left: 1rem;
+
+    }
 
     .mobile-menu {
       display: none;
@@ -170,16 +170,15 @@ nav {
       pointer-events: auto;
 
       li a {
-        position: relative;   
-
+        position: relative;
         width: 100%;
         text-align: center;
-        font-size: 1.5rem;
+        font-size: 1.2rem;
         color: #fff;
         text-decoration: none;
         transition: background 0.3s ease, color 0.3s ease;
 
-         &.active {
+        &.active {
           border-bottom: 2px solid #fff;
         }
 
